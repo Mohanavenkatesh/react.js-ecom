@@ -1,7 +1,7 @@
 {
   "name": "ecom",
   "version": "0.1.0",
-  "homepage": "https://github.com/Mohanavenkatesh/ecom",
+ "homepage": "https://mohanavenkatesh.github.io/ecom",
   "private": true,
   "dependencies": {
     "cra-template": "1.2.0",
