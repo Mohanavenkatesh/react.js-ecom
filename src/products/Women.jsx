@@ -1,14 +1,12 @@
 import React from 'react'
 import prductdatas from '../ProducDetails'
 
-export const Product = ({ array, setarray }) => {
-
+export const Women = ({ array, setarray }) => {
     const adddata = (items) => {
 
         setarray([...array, items])
 
     }
-
     return (
         <div>
             <h1 className='flex gap-5 justify-evenly flex-wrap  items-center text-center bg-gray-50 p-12 md:p-32'>{prductdatas.map((d) =>
