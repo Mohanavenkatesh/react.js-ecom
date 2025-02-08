@@ -1,15 +1,22 @@
 {
   "files": {
-    "main.css": "/ecom/static/css/main.13251f58.css",
-    "main.js": "/ecom/static/js/main.00878dfc.js",
-    "static/js/488.ba09d4a1.chunk.js": "/ecom/static/js/488.ba09d4a1.chunk.js",
+    "main.css": "/ecom/static/css/main.fd9965b2.css",
+    "main.js": "/ecom/static/js/main.4c24b3a4.js",
+    "static/js/488.f1ec7265.chunk.js": "/ecom/static/js/488.f1ec7265.chunk.js",
+    "static/media/Men.avif": "/ecom/static/media/Men.d47bd664eebfb69ccb24.avif",
+    "static/media/Women.avif": "/ecom/static/media/Women.6389aaf3589ec76152ac.avif",
+    "static/media/Dress2.avif": "/ecom/static/media/Dress2.e951fbe31a5f7bbc6018.avif",
+    "static/media/Dress4.avif": "/ecom/static/media/Dress4.253ba612b9538aec858c.avif",
+    "static/media/Kids.avif": "/ecom/static/media/Kids.3e472eeef46b30f603af.avif",
+    "static/media/Dress1.avif": "/ecom/static/media/Dress1.e9b578edce2e06cdde40.avif",
+    "static/media/Dress3.jpeg": "/ecom/static/media/Dress3.7c7e4834c60eb8671e4b.jpeg",
     "index.html": "/ecom/index.html",
-    "main.13251f58.css.map": "/ecom/static/css/main.13251f58.css.map",
-    "main.00878dfc.js.map": "/ecom/static/js/main.00878dfc.js.map",
-    "488.ba09d4a1.chunk.js.map": "/ecom/static/js/488.ba09d4a1.chunk.js.map"
+    "main.fd9965b2.css.map": "/ecom/static/css/main.fd9965b2.css.map",
+    "main.4c24b3a4.js.map": "/ecom/static/js/main.4c24b3a4.js.map",
+    "488.f1ec7265.chunk.js.map": "/ecom/static/js/488.f1ec7265.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.13251f58.css",
-    "static/js/main.00878dfc.js"
+    "static/css/main.fd9965b2.css",
+    "static/js/main.4c24b3a4.js"
   ]
 }
