@@ -2,6 +2,7 @@ import React from 'react'
 import prductdatas from '../ProducDetails'
 
 export const Kids = ({ array, setarray }) => {
+
     const adddata = (items) => {
 
         setarray([...array, items])

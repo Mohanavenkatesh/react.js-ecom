@@ -25,7 +25,7 @@ function App() {
 
         <Navbar></Navbar>
 
-        <Home></Home>
+      
         
         <Routes>
 

@@ -1,6 +1,10 @@
 import React from 'react'
 
 export const Cart = ({ array, setarray }) => {
+
+
+    const = 
+
     return (
         <div>
             <div className='flex flex-row gap-5 justify-evenly   flex-wrap  items-start text-center bg-gray-50 md:p-32'>
