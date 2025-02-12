@@ -16,7 +16,7 @@ function App() {
 
   const [array, setarray] = useState([])
 
-  
+
 
   return (
     <div className="App">
@@ -24,8 +24,9 @@ function App() {
       <BrowserRouter>
 
         <Navbar></Navbar>
-        
 
+        <Home></Home>
+        
         <Routes>
 
           <Route path='/' element={<Home></Home>} ></Route>
@@ -47,7 +48,7 @@ function App() {
 
       </BrowserRouter>
 
-      
+
 
     </div>
   );
