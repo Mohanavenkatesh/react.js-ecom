@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Mohanavenkatesh/ecom/static/css/main.3a5291c3.css",
-    "main.js": "/Mohanavenkatesh/ecom/static/js/main.c51e8f2d.js",
-    "static/js/453.a6a97343.chunk.js": "/Mohanavenkatesh/ecom/static/js/453.a6a97343.chunk.js",
-    "index.html": "/Mohanavenkatesh/ecom/index.html",
-    "main.3a5291c3.css.map": "/Mohanavenkatesh/ecom/static/css/main.3a5291c3.css.map",
-    "main.c51e8f2d.js.map": "/Mohanavenkatesh/ecom/static/js/main.c51e8f2d.js.map",
-    "453.a6a97343.chunk.js.map": "/Mohanavenkatesh/ecom/static/js/453.a6a97343.chunk.js.map"
+    "main.css": "/ecom/static/css/main.3a5291c3.css",
+    "main.js": "/ecom/static/js/main.18f75b8d.js",
+    "static/js/453.a6a97343.chunk.js": "/ecom/static/js/453.a6a97343.chunk.js",
+    "index.html": "/ecom/index.html",
+    "main.3a5291c3.css.map": "/ecom/static/css/main.3a5291c3.css.map",
+    "main.18f75b8d.js.map": "/ecom/static/js/main.18f75b8d.js.map",
+    "453.a6a97343.chunk.js.map": "/ecom/static/js/453.a6a97343.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3a5291c3.css",
-    "static/js/main.c51e8f2d.js"
+    "static/js/main.18f75b8d.js"
   ]
 }
