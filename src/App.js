@@ -30,7 +30,7 @@ const [array , setarray] = useState([])
           <Route path='/Shop' element={<Shop array={array} setarray={setarray}></Shop>}></Route>
           <Route path='/About' element={<About></About>}></Route>
           <Route path='/Contact' element={<Contact></Contact>}></Route>
-          <Route path='/Cart' element={<Cart></Cart>}></Route>
+          <Route path='/Cart' element={<Cart array={array} setarray={setarray}></Cart>}></Route>
 
           <Route path='/Men' element={<Men></Men>}></Route>
           <Route path='/Women' element={<Women></Women>}></Route>

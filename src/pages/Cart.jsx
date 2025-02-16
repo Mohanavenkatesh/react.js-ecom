@@ -1,11 +1,6 @@
 import React from 'react'
 
-export const Cart = () => {
-
-    const cartItems = [
-        { id: 1, name: "Product 1", price: 29.99, quantity: 1 },
-        { id: 2, name: "Product 2", price: 49.99, quantity: 2 },
-    ];
+export const Cart = ({ array, setarray }) => {
 
 
     return (
@@ -13,23 +8,20 @@ export const Cart = () => {
 
             <div className="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md">
                 <h2 className="text-xl font-semibold mb-4">Shopping Cart</h2>
-                {cartItems.length === 0 ? (
+                {array.length === 0 ? (
                     <p className="text-gray-500">Your cart is empty.</p>
                 ) : (
                     <ul>
-                        {cartItems.map((item) => (
+                        {array.map((item) => (
                             <li
                                 key={item.id}
                                 className="flex justify-between items-center py-2 border-b"
-                            >
-                                <div>
-                                    <p className="font-medium">{item.name}</p>
-                                    <p className="text-sm text-gray-500">Qty: {item.quantity}</p>
+                            > <div className="border p-4 rounded-lg shadow-md">
+                                    <img src={item.men_item_1} className=" object-cover rounded-md" />
+                                    <h3 className="text-lg font-semibold mt-2">{item.name}</h3>
+                                    <p className="text-gray-600">{item.description}</p>
+                                    <p className="text-blue-600 font-bold mt-1">₹{item.price}</p>
                                 </div>
-                                <p className="font-semibold">${(item.price * item.quantity).toFixed(2)}</p>
-                                <button className="text-red-500 hover:text-red-700">
-                                    Remove
-                                </button>
                             </li>
                         ))}
                     </ul>
@@ -38,7 +30,7 @@ export const Cart = () => {
                     <span>Total:</span>
                     <span>
                         $
-                        {cartItems
+                        {array
                             .reduce((total, item) => total + item.price * item.quantity, 0)
                             .toFixed(2)}
                     </span>
