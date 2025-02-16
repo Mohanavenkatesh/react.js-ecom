@@ -5,6 +5,7 @@ import React from 'react'
 export const Home = () => {
     return (
         <div>
+            
             <div>
                 {/* Hero Section */}
                 <section className="bg-blue-600 text-white text-center py-20 px-6">

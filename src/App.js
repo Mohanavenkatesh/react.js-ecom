@@ -9,8 +9,14 @@ import { Shop } from './pages/Shop';
 import { About } from './pages/About';
 import { Contact } from './pages/Contact';
 import { Cart } from './pages/Cart';
+import { useState } from 'react';
 
 function App() {
+
+
+const [array , setarray] = useState([])
+
+
   return (
     <div className="App">
 
@@ -21,7 +27,7 @@ function App() {
         <Routes>
 
           <Route path='/' element={<Home></Home>}></Route>
-          <Route path='/Shop' element={<Shop></Shop>}></Route>
+          <Route path='/Shop' element={<Shop array={array} setarray={setarray}></Shop>}></Route>
           <Route path='/About' element={<About></About>}></Route>
           <Route path='/Contact' element={<Contact></Contact>}></Route>
           <Route path='/Cart' element={<Cart></Cart>}></Route>
