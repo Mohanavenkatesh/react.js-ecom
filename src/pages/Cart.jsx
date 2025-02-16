@@ -3,7 +3,7 @@ import React from 'react'
 export const Cart = ({ array, setarray }) => {
 
 
-    const = 
+
 
     return (
         <div>

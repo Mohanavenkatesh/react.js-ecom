@@ -4,21 +4,12 @@ const images = [
 
     {
 
-        img1: require('./imgs/Women/Women.avif'),
-        img2: require('./imgs/Women/Men.avif'),
-        img3: require('./imgs/Women/Kids.avif')
+        img1: require('./imgs/hero_section/men.png'),
+        img2: require('./imgs/hero_section/kids.png'),
+        img3: require('./imgs/hero_section/women.png')
 
 
-    },
-
-
-
-
-
-
-
-
-
+    } ,
 
 ]
 
