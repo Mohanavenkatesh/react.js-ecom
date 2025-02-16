@@ -1,17 +1,14 @@
 import React from 'react'
-import images from '../Imges'
+import  Hero_images from "../Js/Hero_Imges";
 import { Link } from 'react-router-dom'
 
 
 export const Home = () => {
     return (
         <div>
-
             <div >
-
                 {
-
-                    images.map((homepageimg) =>
+                    Hero_images.map((hero_img) =>
 
                         <div className='flex gap-5 flex-wrap flex-col justify-center items-center '>
 
@@ -23,41 +20,30 @@ export const Home = () => {
 
                             </div>
 
-
                             <div>
                                 <div className='p-5'>
-                                    <Link to={"/Men"}><img src={homepageimg.img1} alt="" width={900} /></Link>
+                                    <Link to={"/Men"}><img src={hero_img.img1} alt="" width={1300} /></Link>
                                     <Link to={"/Men"}><button className='bg-black text-white p-1 my-3 w-full'>Shop Now</button></Link>
                                 </div>
 
 
 
                                 <div className='p-5'>
-                                    <Link to={"/Women"}> <img src={homepageimg.img3} alt="" width={900} /></Link>
+                                    <Link to={"/Women"}> <img src={hero_img.img3} alt="" width={1300} /></Link>
                                     <Link to={"/Women"}> <button className='bg-black text-white p-1 my-3 w-full'>Shop Now</button> </Link>
                                 </div>
 
                                 <div className='p-5'>
 
-                                    <Link to={"/Kids"}> <img src={homepageimg.img2} alt="" width={900} /></Link>
+                                    <Link to={"/Kids"}> <img src={hero_img.img2} alt="" width={1300} /></Link>
                                     <Link to={"/Kids"}> <button className='bg-black text-white p-1 my-3 w-full'>Shop Now</button></Link>
                                 </div>
                             </div>
 
-
-
                         </div>
-
                     )
-
                 }
             </div>
-
-
-
-
-
-
         </div>
     )
 }

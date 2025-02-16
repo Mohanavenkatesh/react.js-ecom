@@ -1,5 +1,5 @@
 import React from 'react'
-import prductdatas from '../ProducDetails'
+import prductdatas from '../Js/ProducDetails'
 
 export const Men = ({ array, setarray }) => {
     const adddata = (items) => {

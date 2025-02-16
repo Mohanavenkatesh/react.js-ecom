@@ -1,5 +1,5 @@
 import React from 'react'
-import prductdatas from '../ProducDetails'
+import prduct_kids from '../Js/Kids'
 
 export const Kids = ({ array, setarray }) => {
 
@@ -10,7 +10,7 @@ export const Kids = ({ array, setarray }) => {
     }
     return (
         <div>
-            <h1 className='flex gap-5 justify-evenly flex-wrap  items-center text-center bg-gray-50 p-12 md:p-32'>{prductdatas.map((d) =>
+            <h1 className='flex gap-5 justify-evenly flex-wrap  items-center text-center bg-gray-50 p-12 md:p-32'>{prduct_kids.map((d) =>
 
 
                 <div className='w-72 rounded border border-black'>

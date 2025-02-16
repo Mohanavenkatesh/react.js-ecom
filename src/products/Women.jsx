@@ -1,5 +1,5 @@
 import React from 'react'
-import prductdatas from '../ProducDetails'
+import prduct_women from '../Js/Women'
 
 export const Women = ({ array, setarray }) => {
     const adddata = (items) => {
@@ -9,7 +9,7 @@ export const Women = ({ array, setarray }) => {
     }
     return (
         <div>
-            <h1 className='flex gap-5 justify-evenly flex-wrap  items-center text-center bg-gray-50 p-12 md:p-32'>{prductdatas.map((d) =>
+            <h1 className='flex gap-5 justify-evenly flex-wrap  items-center text-center bg-gray-50 p-12 md:p-32'>{prduct_women.map((d) =>
 
 
                 <div className='w-72 rounded border border-black '>
