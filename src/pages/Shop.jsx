@@ -3,17 +3,16 @@ import { Link } from "react-router-dom";
 import items from "../js/items";
 
 export const Shop = ({ array, setarray }) => {
+
   const addToCart = (item) => {
+
     setarray([...array, item]);
+
   };
-
-
 
   return (
     <div>
 
-
-      
       <div className="container mx-auto p-6 text-center">
         <h1 className="text-3xl font-bold text-blue-600">Shop Our Collection</h1>
         <p className="text-gray-700 mt-2 max-w-2xl mx-auto">

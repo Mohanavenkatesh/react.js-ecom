@@ -1,14 +1,23 @@
 
 
 import React from 'react'
+import items from "../js/items";
 
-export const Home = () => {
+export const Home = ({ array, setarray }) => {
+
+
+    const addToCart = (item) => {
+
+        setarray([...array, item]);
+
+    };
+
+
     return (
         <div>
-            
             <div>
                 {/* Hero Section */}
-                <section className="bg-blue-600 text-white text-center py-20 px-6">
+                <section className="bg-blue-600 text-white text-center py-40 px-6">
                     <h1 className="text-4xl font-bold">Welcome to React Store</h1>
                     <p className="mt-2 text-lg">Find the best T-shirts, hoodies, and polo shirts at unbeatable prices.</p>
                     <a href="/shop" className="mt-4 inline-block bg-white text-blue-600 font-semibold py-2 px-6 rounded-md hover:bg-gray-200">Shop Now</a>
@@ -19,13 +28,20 @@ export const Home = () => {
                     <h2 className="text-3xl font-bold text-blue-600">Featured Products</h2>
                     <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {/* Sample Product Card */}
-                        <div className="border p-4 rounded-lg shadow-md">
-                            <img src="https://via.placeholder.com/150" alt="Product" className="w-full rounded-md" />
-                            <h3 className="text-lg font-semibold mt-2">Premium T-Shirt</h3>
-                            <p className="text-gray-600">Soft cotton, multiple colors.</p>
-                            <p className="text-blue-600 font-bold mt-1">₹999</p>
-                            <button className="mt-2 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700">Add to Cart</button>
-                        </div>
+                        {items.map((item) => (
+                            <div className="border p-4 rounded-lg shadow-md">
+                                <img src={item.men_item_1} className=" object-cover rounded-md" />
+                                <h3 className="text-lg font-semibold mt-2">{item.name}</h3>
+                                <p className="text-gray-600">{item.description}</p>
+                                <p className="text-blue-600 font-bold mt-1">₹{item.price}</p>
+                                <button
+                                    onClick={() => addToCart(item)}
+                                    className="mt-2 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700"
+                                >
+                                    Add to Cart
+                                </button>
+                            </div>
+                        ))}
                     </div>
                 </section>
 
