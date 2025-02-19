@@ -1,47 +1,29 @@
-import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Men } from './pages/Men';
-import { Women } from './pages/Women';
-import { Kids } from './pages/Kids';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Home } from './pages/Home';
-import { Shop } from './pages/Shop';
-import { About } from './pages/About';
-import { Contact } from './pages/Contact';
-import { Cart } from './pages/Cart';
-import { useState } from 'react';
 
-function App() {
+const App = () => {
+  const [array, setArray] = useState([]);
+  const [theme, setTheme] = useState('light');
 
+  useEffect(() => {
+    document.documentElement.className = theme;
+  }, [theme]);
 
-const [array , setarray] = useState([])
-
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
 
   return (
-    <div className="App">
-
-      <BrowserRouter>
-
-        <Navbar></Navbar>
-
-        <Routes>
-
-          <Route path='/' element={<Home></Home>}></Route>
-          <Route path='/Shop' element={<Shop array={array} setarray={setarray}></Shop>}></Route>
-          <Route path='/About' element={<About></About>}></Route>
-          <Route path='/Contact' element={<Contact></Contact>}></Route>
-          <Route path='/Cart' element={<Cart array={array} setarray={setarray}></Cart>}></Route>
-
-          <Route path='/Men' element={<Men></Men>}></Route>
-          <Route path='/Women' element={<Women></Women>}></Route>
-          <Route path='/Kids' element={<Kids></Kids>}></Route>
-
-        </Routes>
-
-      </BrowserRouter>
-
-    </div>
+    <Router>
+      <Navbar theme={theme} toggleTheme={toggleTheme} />
+      <Routes>
+        <Route path="/" element={<Home array={array} setarray={setArray} theme={theme} toggleTheme={toggleTheme} />} />
+        {/* Add other routes here */}
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
