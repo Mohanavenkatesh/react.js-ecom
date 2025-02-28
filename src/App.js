@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, BrowserRouter } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Home } from './pages/Home';
+import { Shop } from './pages/Shop';
+import { Cart } from './pages/Cart';
+import { About } from './pages/About';
+import { Contact } from './pages/Contact';
 
 const App = () => {
   const [array, setArray] = useState([]);
@@ -16,13 +20,17 @@ const App = () => {
   };
 
   return (
-    <Router>
+
+    <BrowserRouter>
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <Routes>
         <Route path="/" element={<Home array={array} setarray={setArray} theme={theme} toggleTheme={toggleTheme} />} />
-        {/* Add other routes here */}
+        <Route path="/Shop" element={<Shop array={array} setarray={setArray} theme={theme} toggleTheme={toggleTheme} ></Shop>} />
+        <Route path="/Cart" element={<Cart array={array} setarray={setArray} theme={theme} toggleTheme={toggleTheme} ></Cart>} />
+        <Route path="/About" element={<About array={array} setarray={setArray} theme={theme} toggleTheme={toggleTheme} ></About>} />
+        <Route path="/Contact" element={<Contact array={array} setarray={setArray} theme={theme} toggleTheme={toggleTheme} ></Contact>} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 };
 

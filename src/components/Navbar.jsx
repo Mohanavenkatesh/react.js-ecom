@@ -13,7 +13,7 @@ export const Navbar = ({ theme, toggleTheme }) => {
     <div>
       <nav className={`p-4 shadow-md ${theme === 'light' ? 'bg-white text-black' : 'bg-black text-white'}`}>
         <div className="container mx-auto flex justify-between items-center">
-          <Link to={'/'}><h1 className="text-2xl font-bold">React Store</h1></Link>
+          <Link to={'/'}><p className=" font-medium">React Store</p></Link>
 
           {/* Desktop Menu */}
           <ul className="hidden md:flex space-x-6 font-medium">
@@ -25,7 +25,7 @@ export const Navbar = ({ theme, toggleTheme }) => {
           </ul>
 
           {/* Theme Toggle Button */}
-          <button onClick={toggleTheme} className="ml-4">
+          <button onClick={toggleTheme} className="ml-4 font-medium">
             {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
           </button>
 

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import items from "../js/items";
 
-export const Shop = ({ array, setarray }) => {
+export const Shop = ({ array, setarray , theme }) => {
 
   const addToCart = (item) => {
 
@@ -11,11 +11,11 @@ export const Shop = ({ array, setarray }) => {
   };
 
   return (
-    <div>
+    <div className={theme === 'light' ? 'bg-white text-black' : 'bg-black text-white'}>
 
       <div className="container mx-auto p-6 text-center">
-        <h1 className="text-3xl font-bold text-blue-600">Shop Our Collection</h1>
-        <p className="text-gray-700 mt-2 max-w-2xl mx-auto">
+        <h1 className="text-3xl font-bold ">Shop Our Collection</h1>
+        <p className=" mt-2 max-w-2xl mx-auto">
           Explore our latest collection of high-quality T-shirts, hoodies, and polo shirts.
           Find the perfect fit for your style!
         </p>
@@ -30,7 +30,7 @@ export const Shop = ({ array, setarray }) => {
               <p className="text-blue-600 font-bold mt-1">₹{item.price}</p>
               <button
                 onClick={() => addToCart(item)}
-                className="mt-2 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700"
+                className={`mt-4 w-full inline-block font-semibold py-2 px-6 rounded-md ${theme === 'light' ? 'bg-black text-white hover:bg-gray-900' : 'bg-white text-black hover:bg-gray-100'}`}
               >
                 Add to Cart
               </button>
