@@ -21,9 +21,9 @@ export const Home = ({ array, setarray, theme, toggleTheme }) => {
         {/* Featured Products */}
         <section className="container mx-auto p-6 text-center">
           <h2 className="text-3xl font-bold">Featured Products</h2>
-          <div className='flex justify-between '>
+          <div className='flex justify-between z'>
 
-            <div className="mt-6 ">
+            <div className="mt-6 md: p-12 ">
               {items.map((item) => (
                 <div className={`border p-4 rounded-lg shadow-md ${theme === 'light' ? 'bg-white text-black' : 'bg-black text-white'}`}>
                   <img src={item.men_item_1} className="object-cover rounded-md" />
@@ -40,7 +40,7 @@ export const Home = ({ array, setarray, theme, toggleTheme }) => {
               ))}
             </div>
 
-            <div className="mt-6 ">
+            <div className="mt-6 md: p-12">
               {items.map((item) => (
                 <div className={`border p-4 rounded-lg shadow-md ${theme === 'light' ? 'bg-white text-black' : 'bg-black text-white'}`}>
                   <img src={item.men_item_1} className="object-cover rounded-md" />
@@ -57,7 +57,7 @@ export const Home = ({ array, setarray, theme, toggleTheme }) => {
               ))}
             </div>
 
-            <div className="mt-6 ">
+            <div className="mt-6 md: p-12 ">
               {items.map((item) => (
                 <div className={`border p-4 rounded-lg shadow-md ${theme === 'light' ? 'bg-white text-black' : 'bg-black text-white'}`}>
                   <img src={item.men_item_1} className="object-cover rounded-md" />
