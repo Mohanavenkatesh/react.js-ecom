@@ -6,6 +6,7 @@ import { Shop } from './pages/Shop';
 import { Cart } from './pages/Cart';
 import { About } from './pages/About';
 import { Contact } from './pages/Contact';
+import { Footer } from './components/Footer';
 
 const App = () => {
   const [array, setArray] = useState([]);
@@ -30,6 +31,7 @@ const App = () => {
         <Route path="/About" element={<About array={array} setarray={setArray} theme={theme} toggleTheme={toggleTheme} ></About>} />
         <Route path="/Contact" element={<Contact array={array} setarray={setArray} theme={theme} toggleTheme={toggleTheme} ></Contact>} />
       </Routes>
+      <Footer></Footer>
     </BrowserRouter>
   );
 };

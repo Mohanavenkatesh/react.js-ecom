@@ -12,7 +12,7 @@ export const Home = ({ array, setarray, theme, toggleTheme }) => {
     <div className={theme === 'light' ? 'bg-white text-black' : 'bg-black text-white'}>
       <div>
         {/* Hero Section */}
-        <section className={`text-center py-40 px-6`}>
+        <section className={`text-center py-80 px-6`}>
           <h1 className="text-4xl font-bold">Welcome to React Store</h1>
           <p className="mt-2 text-lg">Find the best T-shirts, hoodies, and polo shirts at unbeatable prices.</p>
           <a href="/shop" className={`mt-4 inline-block font-semibold py-2 px-6 rounded-md ${theme === 'light' ? 'bg-black text-white hover:bg-gray-900' : 'bg-white text-black hover:bg-gray-100'}`}>Shop Now</a>
@@ -21,9 +21,9 @@ export const Home = ({ array, setarray, theme, toggleTheme }) => {
         {/* Featured Products */}
         <section className="container mx-auto p-6 text-center">
           <h2 className="text-3xl font-bold">Featured Products</h2>
-          <div className='flex justify-between z'>
+          <div className='flex  justify-between z'>
 
-            <div className="mt-6 md: p-12 ">
+            <div className="mt-6  md: p-12 ">
               {items.map((item) => (
                 <div className={`border p-4 rounded-lg shadow-md ${theme === 'light' ? 'bg-white text-black' : 'bg-black text-white'}`}>
                   <img src={item.men_item_1} className="object-cover rounded-md" />
