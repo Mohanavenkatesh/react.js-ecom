@@ -1,6 +1,6 @@
 import React from 'react';
-import items from "../js/items";
-import womenItems from "../js/women";
+import HomePage from '../js/HomePage';
+import { Link } from 'react-router-dom';
 
 export const Home = ({ array, setarray, theme, toggleTheme }) => {
 
@@ -21,63 +21,26 @@ export const Home = ({ array, setarray, theme, toggleTheme }) => {
         {/* Featured Products */}
         <section className="container mx-auto p-6 text-center">
           <h2 className="text-3xl font-bold">Featured Products</h2>
-          <div className='flex  justify-between z'>
-
-            <div className="mt-6  md: p-12 ">
-              {items.map((item) => (
-                <div className={`border p-4 rounded-lg shadow-md ${theme === 'light' ? 'bg-white text-black' : 'bg-black text-white'}`}>
-                  <img src={item.men_item_1} className="object-cover rounded-md" />
-                  <h3 className="text-lg font-semibold mt-2">{item.name}</h3>
-                  <p className={`text-gray-600 ${theme === 'light' ? '' : 'text-gray-300'}`}>{item.description}</p>
-                  <p className="font-bold mt-1">₹{item.price}</p>
-                  <button
-                    onClick={() => addToCart(item)}
-                    className={`mt-2 w-full py-2 px-4 rounded-md ${theme === 'light' ? 'bg-black text-white hover:bg-gray-900' : 'bg-white text-black hover:bg-gray-100'}`}
-                  >
-                    Add to Cart
-                  </button>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
+            {HomePage.map((item) => (
+              <div className='flex justify-center'>
+                <div>
+                  <img src={item.menImg} alt="" />
+                  <Link to='/Kids'>Kids</Link>
                 </div>
-              ))}
-            </div>
+                <div>
+                  <img src={item.menImg} alt="" />
+                  <Link to='/Men'>Kids</Link>
 
-            <div className="mt-6 md: p-12">
-              {items.map((item) => (
-                <div className={`border p-4 rounded-lg shadow-md ${theme === 'light' ? 'bg-white text-black' : 'bg-black text-white'}`}>
-                  <img src={item.men_item_1} className="object-cover rounded-md" />
-                  <h3 className="text-lg font-semibold mt-2">{item.name}</h3>
-                  <p className={`text-gray-600 ${theme === 'light' ? '' : 'text-gray-300'}`}>{item.description}</p>
-                  <p className="font-bold mt-1">₹{item.price}</p>
-                  <button
-                    onClick={() => addToCart(item)}
-                    className={`mt-2 w-full py-2 px-4 rounded-md ${theme === 'light' ? 'bg-black text-white hover:bg-gray-900' : 'bg-white text-black hover:bg-gray-100'}`}
-                  >
-                    Add to Cart
-                  </button>
                 </div>
-              ))}
-            </div>
+                <div>
+                  <img src={item.womenImg} alt="" />
+                  <Link to='/Women'>Kids</Link>
 
-            <div className="mt-6 md: p-12 ">
-              {items.map((item) => (
-                <div className={`border p-4 rounded-lg shadow-md ${theme === 'light' ? 'bg-white text-black' : 'bg-black text-white'}`}>
-                  <img src={item.men_item_1} className="object-cover rounded-md" />
-                  <h3 className="text-lg font-semibold mt-2">{item.name}</h3>
-                  <p className={`text-gray-600 ${theme === 'light' ? '' : 'text-gray-300'}`}>{item.description}</p>
-                  <p className="font-bold mt-1">₹{item.price}</p>
-                  <button
-                    onClick={() => addToCart(item)}
-                    className={`mt-2 w-full py-2 px-4 rounded-md ${theme === 'light' ? 'bg-black text-white hover:bg-gray-900' : 'bg-white text-black hover:bg-gray-100'}`}
-                  >
-                    Add to Cart
-                  </button>
                 </div>
-              ))}
-            </div>
-
+              </div>
+            ))}
           </div>
-
-
-
         </section>
 
         {/* Why Choose Us */}
