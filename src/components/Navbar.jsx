@@ -20,8 +20,8 @@ export const Navbar = ({ theme, toggleTheme }) => {
             <Link to={'/'}><li><a href="#" className="hover:text-gray-500">Home</a></li></Link>
             <Link to={'/Shop'}><li><a href="#" className="hover:text-gray-500">Shop</a></li></Link>
             <Link to={'/About'}><li><a href="#" className="hover:text-gray-500">About</a></li></Link>
-            <Link to={'/Contact'}><li><a href="#" className="hover:text-gray-500">Contact</a></li></Link>           
-             <Link to={'/Cart'}><li><a href="#" className="hover:text-gray-500">Cart</a></li></Link>
+            <Link to={'/Contact'}><li><a href="#" className="hover:text-gray-500">Contact</a></li></Link>
+            <Link to={'/Cart'}><li><a href="#" className="hover:text-gray-500">Cart</a></li></Link>
 
           </ul>
 

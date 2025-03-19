@@ -1,6 +1,7 @@
 import React from 'react';
 import HomePage from '../js/HomePage';
 import { Link } from 'react-router-dom';
+import '../css/MordenBtn.css'
 
 export const Home = ({ array, setarray, theme, toggleTheme }) => {
 
@@ -12,31 +13,46 @@ export const Home = ({ array, setarray, theme, toggleTheme }) => {
     <div className={theme === 'light' ? 'bg-white text-black' : 'bg-black text-white'}>
       <div>
         {/* Hero Section */}
-        <section className={`text-center py-80 px-6`}>
-          <h1 className="text-4xl font-bold">Welcome to React Store</h1>
-          <p className="mt-2 text-lg">Find the best T-shirts, hoodies, and polo shirts at unbeatable prices.</p>
-          <a href="/shop" className={`mt-4 inline-block font-semibold py-2 px-6 rounded-md ${theme === 'light' ? 'bg-black text-white hover:bg-gray-900' : 'bg-white text-black hover:bg-gray-100'}`}>Shop Now</a>
+        <section className="text-center py-80 px-6">
+          <div>
+            <h1 className="text-4xl font-bold">Welcome to React Store</h1>
+            <p className="mt-2 text-lg">
+              Find the best T-shirts, hoodies, and polo shirts at unbeatable prices.
+            </p>
+            <div className="flex justify-center mt-5">
+              <a href="/shop" className="button-86 w-24">Shop Now</a>
+            </div>
+          </div>
         </section>
+
+
 
         {/* Featured Products */}
         <section className="container mx-auto p-6 text-center">
           <h2 className="text-3xl font-bold">Featured Products</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6">
+          <div className="">
             {HomePage.map((item) => (
-              <div className='flex justify-center'>
-                <div>
-                  <img src={item.menImg} alt="" />
-                  <Link to='/Kids'>Kids</Link>
+              <div className='md:flex  justify-center '>
+                <div className='p-5  md:p-16'>
+                  <img src={item.kidsImg} alt="" className='rounded-xl' />
+                  <div className='flex justify-center mt-5'>
+                    <Link className='button-86' to='/Kids'><a href="">Shop Now</a></Link>
+                  </div>
                 </div>
-                <div>
-                  <img src={item.menImg} alt="" />
-                  <Link to='/Men'>Kids</Link>
+                <div className='p-5  md:p-16'>
+                  <img src={item.menImg} alt="" className='rounded-xl' />
+
+                  <div className='flex justify-center mt-5'>
+                    <Link className='button-86' to='/Men'><a href="">Shop Now</a></Link>
+                  </div>
 
                 </div>
-                <div>
-                  <img src={item.womenImg} alt="" />
-                  <Link to='/Women'>Kids</Link>
+                <div className='p-5  md:p-16'>
+                  <img src={item.womenImg} alt="" className='rounded-xl' />
 
+                  <div className='flex justify-center mt-5'>
+                    <Link className='button-86' to='/Women'><a href="">Shop Now</a></Link>
+                  </div>
                 </div>
               </div>
             ))}

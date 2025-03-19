@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const Women = () => {
+export const Women = ({ array, setarray, theme, toggleTheme }) => {
   return (
-    <div>Women</div>
+    <div className={theme === 'light' ? 'bg-white text-black' : 'bg-black text-white'}>Women</div>
   )
 }
