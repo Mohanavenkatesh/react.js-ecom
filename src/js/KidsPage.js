@@ -3,7 +3,7 @@ const KidsPage = [
     {
 
         kidsImg1: require('../imgs/KidsPage/Kids (1).avif'),
-        kidsName1: "Linen-blend shirt",
+        kidsImgName1: "Linen-blend shirt",
         kidsPrice1: "Rs:1200",
 
 
