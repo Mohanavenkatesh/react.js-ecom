@@ -10,10 +10,14 @@ export const Home = ({ array, setarray, theme, toggleTheme }) => {
   };
 
   return (
-    <div className={theme === 'light' ? 'bg-white text-black' : 'bg-black text-white'}>
+    <div className={theme === 'light' ? 'bg-gray-100 text-black' : 'bg-black text-white'}>
       <div>
 
 
+        {/* Start header area */}
+        <section>
+          <div></div>
+        </section>
         {/* Featured Products */}
         <section className="container mx-auto p-6 text-center">
           {/* <h2 className="text-3xl font-bold">Featured Products</h2> */}

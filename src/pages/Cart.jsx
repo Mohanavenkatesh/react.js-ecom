@@ -1,41 +1,32 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 export const Cart = ({ array, setarray, theme }) => {
-
-
   return (
-    <div className={theme === 'light' ? 'bg-white text-black' : 'bg-black text-white'}>
-      {array.map((item) => (
-        <div className='md:flex  justify-center '>
-          <div className='p-5  md:p-4'>
-            <img src={item.kidsImg1} alt="" className='' />
+    <div
+      className={`min-h-screen ${theme === 'light' ? 'bg-gray-100 text-black' : 'bg-gray-900 text-white'
+        } p-5`}
+    >
+      <h1 className="text-3xl font-bold text-center my-8">Your Cart</h1>
 
-          </div>
-          <div className='p-5  md:p-4'>
-            <img src={item.kidsImg2} alt="" className='' />
-
-            <div className='flex justify-center mt-5'>
-              <Link className='button-86' to='/Shop'><a href="">Shop Now</a></Link>
-            </div>
-
-          </div>
-          <div className='p-5  md:p-4'>
-            <img src={item.kidsImg3} alt="" className='' />
-
-            <div className='flex justify-center mt-5'>
-              <Link className='button-86' to='/Shop'><a href="">Shop Now</a></Link>
-            </div>
-          </div>
-          <div className='p-5  md:p-4'>
-            <img src={item.kidsImg4} alt="" className='' />
-
-            <div className='flex justify-center mt-5'>
-              <Link className='button-86' to='/Shop'><a href="">Shop Now</a></Link>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {array.map((item) => (
+          <div
+            key={item.id}
+            className="bg-white shadow-lg  overflow-hidden transition-transform transform hover:scale-105"
+          >
+            <img
+              src={item.kidsImg}
+              alt="Cart Item"
+              className="w-full  object-cover"
+            />
+            <div className="p-2">
+              <h1 className="font-bold">{item.Name}</h1>
+              <p className="text-gray-500">  MRP inclusive of all taxes</p>
+              <h1 className="font-bold">{item.Price}</h1>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

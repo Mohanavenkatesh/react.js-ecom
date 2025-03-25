@@ -11,59 +11,48 @@ export const Shop = ({ array, setarray, theme }) => {
   };
 
   return (
-    <div className={theme === 'light' ? 'bg-white text-black' : 'bg-black text-white'}>
+    <div className={theme === 'light' ? 'bg-gray-100 text-black' : 'bg-black text-white'}>
 
       {/* Kids */}
-      {KidsPage.map((item) => (
-        <div>
-          <div className="container mx-auto px-5">
-            <h1 className="text-2xl py-5">Kids Section</h1>
-            <div className="">
-              {KidsPage.map((item) => (
-                <div className='md:flex  justify-center '>
-                  <div className='p-5  md:p-4'>
-                    <img src={item.kidsImg1} alt="" className='' />
-                    <div className='flex justify-center mt-5'>
-                      <Link className='button-86' to='/Shop'><a href="" onClick={addToCart}>Add to Cart</a></Link>
-                    </div>
-                  </div>
-                  <div className='p-5  md:p-4'>
-                    <img src={item.kidsImg2} alt="" className='' />
+      <div
+        className={`container mx-auto py-10 px-5 `}
+      >
+        <h1 className="text-3xl font-bold text-center my-8">Kids Section</h1>
 
-                    <div className='flex justify-center mt-5'>
-                      <Link className='button-86' to='/Shop'><a href="" onClick={addToCart}>Add to Cart</a></Link>
-                    </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {KidsPage.map((kidsitem) => (
+            <div
+              key={kidsitem.id}
+              className="bg-gray-100  shadow-lg  overflow-hidden transition-transform transform "
+            >
+              <img
+                src={kidsitem.kidsImg}
+                alt="Kids Item"
+                className="w-full  object-cover"
+              />
+              <div className="p-2">
+                 <h1 className="font-bold">{kidsitem.Name}</h1>
+              <p className="text-gray-500">  MRP inclusive of all taxes</p>
+              <h1 >{kidsitem.Price}</h1>
+              </div>
+             
 
-                  </div>
-                  <div className='p-5  md:p-4'>
-                    <img src={item.kidsImg3} alt="" className='' />
-
-                    <div className='flex justify-center mt-5'>
-                      <Link className='button-86' to='/Shop'><a href="" onClick={addToCart}>Add to Cart</a></Link>
-                    </div>
-                  </div>
-                  <div className='p-5  md:p-4'>
-                    <img src={item.kidsImg4} alt="" className='' />
-
-                    <div className='flex justify-center mt-5'>
-                      <Link className='button-86' to='/Shop'><a href="" onClick={addToCart}>Add to Cart</a></Link>
-                    </div>
-                  </div>
-                </div>
-              ))}
+              <div className=" flex justify-center">
+                <button
+                  onClick={() => addToCart(kidsitem)}
+                  className="button-86 w-full max-w-[150px]"
+                >
+                  Add to cart
+                </button>
+              </div>
             </div>
-          </div>
-
-
-
-
-
+          ))}
         </div>
-      ))}
+      </div>
 
 
       {/* MenPage */}
-      {MenPage.map((item) => (
+      {/* {MenPage.map((item) => (
         <div>
           <div className="container mx-auto px-5">
             <h1 className="text-2xl py-5">Mens Section</h1>
@@ -108,10 +97,10 @@ export const Shop = ({ array, setarray, theme }) => {
 
 
         </div>
-      ))}
+      ))} */}
 
       {/* WomensPage */}
-      {WomenPage.map((item) => (
+      {/* {WomenPage.map((item) => (
         <div>
           <div className="container mx-auto px-5">
             <h1 className="text-2xl py-5">Mens Section</h1>
@@ -156,7 +145,7 @@ export const Shop = ({ array, setarray, theme }) => {
 
 
         </div>
-      ))}
+      ))} */}
     </div>
   );
 };

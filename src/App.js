@@ -7,6 +7,7 @@ import { Cart } from './pages/Cart';
 
 const App = () => {
   const [array, setArray] = useState([]);
+  console.log(array);
   const [theme, setTheme] = useState('light');
 
 
@@ -21,6 +22,7 @@ const App = () => {
   return (
 
     <BrowserRouter>
+
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <Routes>
 

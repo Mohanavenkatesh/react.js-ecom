@@ -1,25 +1,27 @@
 const KidsPage = [
 
     {
+        id: 1,
+        Name: "Cotton denim dress",
+        Price: "Rs. 1,999.00",
+        kidsImg: require('../imgs/KidsPage/Kids (1).avif'),
+    }, {
 
-        kidsImg1: require('../imgs/KidsPage/Kids (1).avif'),
-        kidsImgName1: "Linen-blend shirt",
-        kidsPrice1: "Rs:1200",
-
-
-        kidsImg2: require('../imgs/KidsPage/Kids (2).avif'),
-        kidsName2: "Linen-blend shirt",
-        kidsPrice2: "Rs:1200",
-
-        kidsImg3: require('../imgs/KidsPage/Kids (3).avif'),
-        kidsName3: "Linen-blend shirt",
-        kidsPrice3: "Rs:1200",
-
-        kidsImg4: require('../imgs/KidsPage/Kids (4).avif'),
-        kidsName4: "Linen-blend shirt",
-        kidsPrice4: "Rs:1200",
-
-    }
+        id: 2,
+        Name: "Pointelle-knit cotton T-shirt",
+        Price: "Rs. 799.00",
+        kidsImg: require('../imgs/KidsPage/Kids (2).avif'),
+    }, {
+        id: 3,
+        Name: "Loose denim jacket",
+        Price: "Rs. 1,999.00",
+        kidsImg: require('../imgs/KidsPage/Kids (3).avif'),
+    }, {
+        id: 4,
+        Name: "Cotton-knit polo shirt",
+        Price: "Rs. 1,299.00",
+        kidsImg: require('../imgs/KidsPage/Kids (4).avif'),
+    },
 
 ]
 
