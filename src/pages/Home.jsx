@@ -2,39 +2,51 @@ import React from 'react';
 import HomePage from '../js/HomePage';
 import { Link } from 'react-router-dom';
 import '../css/MordenBtn.css';
+import { useState } from "react";
+import { X } from "lucide-react";
+import kidBanner from "../imgs/kidsBanner.avif";
+import menBanner from "../imgs/menBanner.avif";
+import womenBanner from "../imgs/womenBanner.avif";
+import '../css/Home.css'
 
 export const Home = ({ array, setarray, theme, toggleTheme }) => {
   const addToCart = (item) => {
     setarray([...array, item]);
   };
 
+
   return (
     <div className="bg-gray-100 min-h-screen p-5">
-      {/* Featured Products */}
-      <section className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-8">Featured Products</h2>
 
-        {/* Grid for Products */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {HomePage.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105"
-            >
-              <img
-                src={item.kidsImg}
-                alt="Kids"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-4">
-                <Link className="button-86" to="/Shop">
-                  Shop Now
-                </Link>
-              </div>
-            </div>
-          ))}
+      <div className='md:px-20'>
+        <Link to={'/Shop'}><img className='mb-5 ' src={kidBanner} alt="" /></Link>
+        <div className='w-36 md:w-52 my-5'>
+          <h1 className='md:text-4xl mb-2'>Kids Wear</h1>
+          <p className='mb-2'>Jump into spring</p>
+          <Link to={'/Shop'}><button className='button-86'>Shop Now</button></Link>
         </div>
-      </section>
+      </div>
+
+      <div className='md:px-20'>
+        <Link to={'/Shop'}><img className='mb-5 ' src={menBanner} alt="" /></Link>
+        <div className='w-36 md:w-52 my-5'>
+          <h1 className='md:text-4xl mb-2'>Kids Wear</h1>
+          <p className='mb-2'>Jump into spring</p>
+          <Link to={'/Shop'}><button className='button-86'>Shop Now</button></Link>
+        </div>
+      </div>
+
+      <div className='md:px-20'>
+        <Link to={'/Shop'}><img className='mb-5 ' src={womenBanner} alt="" /></Link>
+        <div className='w-36 md:w-52 my-5'>
+          <h1 className='md:text-4xl mb-2'>Kids Wear</h1>
+          <p className='mb-2'>Jump into spring</p>
+          <Link to={'/Shop'}><button className='button-86'>Shop Now</button></Link>
+        </div>
+      </div>
+
+
+
     </div>
   );
 };

@@ -11,15 +11,16 @@ export const Shop = ({ array, setarray, theme }) => {
   };
 
   return (
-    <div>
+    <div className="bg-gray-100">
 
       {/* Kids */}
       <div
-        className={`container mx-auto `}
+        className={`container mx-auto bg-gray-100  px-5`}
       >
-        <h1 className="text-3xl font-bold text-center ">Kids Section</h1>
+        <h1 className="text-3xl font-bold text-center my-5">Kids Section</h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          
           {KidsPage.map((kidsitem) => (
             <div
               key={kidsitem.id}
@@ -52,10 +53,10 @@ export const Shop = ({ array, setarray, theme }) => {
 
 
       {/* MenPage */}
-      {/* {MenPage.map((item) => (
+       {MenPage.map((item) => (
         <div>
           <div className="container mx-auto px-5">
-            <h1 className="text-2xl py-5">Mens Section</h1>
+            <h1 className="text-2xl  py-5">Mens Section</h1>
             <div className="">
               {MenPage.map((item) => (
                 <div className='md:flex  justify-center '>
@@ -97,10 +98,10 @@ export const Shop = ({ array, setarray, theme }) => {
 
 
         </div>
-      ))} */}
+      ))} 
 
       {/* WomensPage */}
-      {/* {WomenPage.map((item) => (
+      {WomenPage.map((item) => (
         <div>
           <div className="container mx-auto px-5">
             <h1 className="text-2xl py-5">Mens Section</h1>
@@ -145,7 +146,7 @@ export const Shop = ({ array, setarray, theme }) => {
 
 
         </div>
-      ))} */}
+      ))} 
     </div>
   );
 };
