@@ -1,10 +1,13 @@
 {
   "files": {
-    "main.css": "/ecom/static/css/main.4b982e51.css",
-    "main.js": "/ecom/static/js/main.3f81bf3a.js",
+    "main.css": "/ecom/static/css/main.abb628f3.css",
+    "main.js": "/ecom/static/js/main.b2bf63df.js",
     "static/js/453.a6a97343.chunk.js": "/ecom/static/js/453.a6a97343.chunk.js",
+    "static/media/menBanner.avif": "/ecom/static/media/menBanner.1c00b8f5c66fc095951d.avif",
     "static/media/Kids (3).avif": "/ecom/static/media/Kids (3).257c22638b2745b467dd.avif",
+    "static/media/womenBanner.avif": "/ecom/static/media/womenBanner.26eb2661611f5c8c9adf.avif",
     "static/media/Kids (4).avif": "/ecom/static/media/Kids (4).4b81a2b2a4639894ff07.avif",
+    "static/media/kidsBanner.avif": "/ecom/static/media/kidsBanner.6d3e526acdf2640ebd10.avif",
     "static/media/kids.jpeg": "/ecom/static/media/kids.5f18c710527331c68490.jpeg",
     "static/media/Kids (2).avif": "/ecom/static/media/Kids (2).84a64e73980135ff1a42.avif",
     "static/media/women.avif": "/ecom/static/media/women.70b2681a35548d6968ae.avif",
@@ -19,12 +22,12 @@
     "static/media/Women (4).avif": "/ecom/static/media/Women (4).6adbf0a65dff7e4a1cf3.avif",
     "static/media/Women (2).avif": "/ecom/static/media/Women (2).e4d59d153a4194bd5ccc.avif",
     "index.html": "/ecom/index.html",
-    "main.4b982e51.css.map": "/ecom/static/css/main.4b982e51.css.map",
-    "main.3f81bf3a.js.map": "/ecom/static/js/main.3f81bf3a.js.map",
+    "main.abb628f3.css.map": "/ecom/static/css/main.abb628f3.css.map",
+    "main.b2bf63df.js.map": "/ecom/static/js/main.b2bf63df.js.map",
     "453.a6a97343.chunk.js.map": "/ecom/static/js/453.a6a97343.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4b982e51.css",
-    "static/js/main.3f81bf3a.js"
+    "static/css/main.abb628f3.css",
+    "static/js/main.b2bf63df.js"
   ]
 }
