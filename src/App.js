@@ -7,6 +7,7 @@ import { Cart } from './pages/Cart';
 import { Footer } from './components/Footer';
 
 const App = () => {
+  
   const [array, setArray] = useState([]);
 
   return (
