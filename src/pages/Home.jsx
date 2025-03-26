@@ -1,56 +1,40 @@
 import React from 'react';
 import HomePage from '../js/HomePage';
 import { Link } from 'react-router-dom';
-import '../css/MordenBtn.css'
+import '../css/MordenBtn.css';
 
 export const Home = ({ array, setarray, theme, toggleTheme }) => {
-
   const addToCart = (item) => {
     setarray([...array, item]);
   };
 
   return (
-    <div className={theme === 'light' ? 'bg-gray-100 text-black' : 'bg-black text-white'}>
-      <div>
+    <div className="bg-gray-100 min-h-screen p-5">
+      {/* Featured Products */}
+      <section className="container mx-auto text-center">
+        <h2 className="text-3xl font-bold mb-8">Featured Products</h2>
 
-
-        {/* Start header area */}
-        <section>
-          <div></div>
-        </section>
-        {/* Featured Products */}
-        <section className="container mx-auto p-6 text-center">
-          {/* <h2 className="text-3xl font-bold">Featured Products</h2> */}
-          <div className="">
-            {HomePage.map((item) => (
-              <div className='md:flex  justify-center '>
-                <div className='p-5  md:p-10'>
-                  <img src={item.kidsImg} alt="" className='' />
-                  <div className='flex justify-center mt-5'>
-                    <Link className='button-86' to='/Shop'><a href="">Shop Now</a></Link>
-                  </div>
-                </div>
-                <div className='p-5  md:p-10'>
-                  <img src={item.menImg} alt="" className='' />
-
-                  <div className='flex justify-center mt-5'>
-                    <Link className='button-86' to='/Shop'><a href="">Shop Now</a></Link>
-                  </div>
-
-                </div>
-                <div className='p-5  md:p-10'>
-                  <img src={item.womenImg} alt="" className='' />
-
-                  <div className='flex justify-center mt-5'>
-                    <Link className='button-86' to='/Shop'><a href="">Shop Now</a></Link>
-                  </div>
-                </div>
+        {/* Grid for Products */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {HomePage.map((item, index) => (
+            <div
+              key={index}
+              className="bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105"
+            >
+              <img
+                src={item.kidsImg}
+                alt="Kids"
+                className="w-full h-64 object-cover"
+              />
+              <div className="p-4">
+                <Link className="button-86" to="/Shop">
+                  Shop Now
+                </Link>
               </div>
-            ))}
-          </div>
-        </section>
-
-      </div>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 };

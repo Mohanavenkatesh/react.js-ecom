@@ -11,13 +11,13 @@ export const Shop = ({ array, setarray, theme }) => {
   };
 
   return (
-    <div className={theme === 'light' ? 'bg-gray-100 text-black' : 'bg-black text-white'}>
+    <div>
 
       {/* Kids */}
       <div
-        className={`container mx-auto py-10 px-5 `}
+        className={`container mx-auto `}
       >
-        <h1 className="text-3xl font-bold text-center my-8">Kids Section</h1>
+        <h1 className="text-3xl font-bold text-center ">Kids Section</h1>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {KidsPage.map((kidsitem) => (
@@ -30,10 +30,10 @@ export const Shop = ({ array, setarray, theme }) => {
                 alt="Kids Item"
                 className="w-full  object-cover"
               />
-              <div className="p-2">
+              <div className="">
                  <h1 className="font-bold">{kidsitem.Name}</h1>
               <p className="text-gray-500">  MRP inclusive of all taxes</p>
-              <h1 >{kidsitem.Price}</h1>
+              <h1  className="font-bold">{kidsitem.Price}</h1>
               </div>
              
 

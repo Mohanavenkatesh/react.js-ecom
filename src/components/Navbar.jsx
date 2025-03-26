@@ -1,30 +1,54 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react'; // need to install via terminal npm install lucide-react
+import { Menu, X } from 'lucide-react'; // Install via: npm install lucide-react
+import { FaUser, FaHeart, FaShoppingBag, FaEllipsisH } from 'react-icons/fa';
 
 export const Navbar = ({ theme, toggleTheme }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    document.documentElement.className = theme;
-  }, [theme]);
-
   return (
     <div>
-      <nav className={`fixed top-0 w-full p-4 shadow-md z-50 ${theme === 'light' ? 'bg-gray-100 text-black' : 'bg-black text-white'}`}>
+      <nav className="fixed top-5 rounded-2xl w-full p-4 shadow-md bg-gray-100 z-50">
         <div className="container mx-auto flex justify-between items-center">
-          <Link to={'/'}><p className="font-medium">React Store</p></Link>
+          {/* Left Side Links */}
+          <div className="hidden md:flex space-x-6 items-center">
+            <Link to={"/Sustainability"} className="text-sm font-medium hover:text-gray-500">
+              Sustainability
+            </Link>
+            <Link href="#" className="text-sm font-medium hover:text-gray-500">
+              Customer Service
+            </Link>
+            <Link to={"/Newsletter"} className="text-sm font-medium hover:text-gray-500">
+              Newsletter
+            </Link>
+            <FaEllipsisH className="text-lg text-gray-600 cursor-pointer" />
+          </div>  
 
-          {/* Desktop Menu */}
-          <ul className="hidden md:flex space-x-6 font-medium">
-            <Link to={'/'}><li><a href="#" className="hover:text-gray-500">Home</a></li></Link>
-            <Link to={'/Shop'}><li><a href="#" className="hover:text-gray-500">Shop</a></li></Link>
-            <Link to={'/Cart'}><li><a href="#" className="hover:text-gray-500">Cart</a></li></Link>
-            {/* Theme Toggle Button */}
-            <button onClick={toggleTheme} className="ml-4 font-medium">
-              {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
-            </button>
-          </ul>
+          {/* Center Logo */}
+          <div className="flex justify-center items-center">
+            <Link to={'/'}>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+                alt="React Logo"
+                className="h-8 w-8 animate-spin-slow"
+              />
+            </Link>
+          </div>
+
+          {/* Right Side Icons */}
+          <div className="hidden md:flex space-x-6 items-center">
+            <Link to={"/Sign in"} className="flex items-center space-x-1 hover:text-gray-500">
+              <FaUser />
+              <span className="text-sm">Sign in</span>
+            </Link>
+            <Link to={"/Favoruites"} className="flex items-center space-x-1 hover:text-gray-500">
+              <FaHeart />
+              <span className="text-sm">Favourites</span>
+            </Link>
+
+
+            <Link to={"/Cart"} className="flex items-center space-x-1 hover:text-gray-500" ><FaShoppingBag /> <span className="text-sm">Shopping bag (0)</span></Link>
+          </div>
 
           {/* Mobile Menu Button */}
           <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
@@ -34,18 +58,40 @@ export const Navbar = ({ theme, toggleTheme }) => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <ul className={`md:hidden space-y-4 p-4 text-center ${theme === 'light' ? 'bg-gray-100 text-black' : 'bg-gray-900 text-white'}`}>
-            <Link to={'/'}><li><a href="#" className="block py-2" onClick={() => setIsOpen(false)}>Home</a></li></Link>
-            <Link to={'/Shop'}><li><a href="#" className="block py-2" onClick={() => setIsOpen(false)}>Shop</a></li></Link>
-            <Link to={'/Cart'}><li><a href="#" className="block py-2" onClick={() => setIsOpen(false)}>Cart</a></li></Link>
-             {/* Theme Toggle Button */}
-             <button onClick={toggleTheme} className="ml-4 font-medium">
-              {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
-            </button>
+          <ul className="md:hidden space-y-4 p-4 text-center bg-gray-100 text-black">
+            <li>
+              <Link to = {"/Sustainability"} className="block py-2" onClick={() => setIsOpen(false)}>
+                Sustainability
+              </Link>
+            </li>
+            <li>
+              <Link to ={"/Customer Service"}className="block py-2" onClick={() => setIsOpen(false)}>
+                Customer Service
+              </Link>
+            </li>
+            <li>
+              <Link to = {"/Newsletter"} className="block py-2" onClick={() => setIsOpen(false)}>
+                Newsletter
+              </Link>
+            </li>
+            <li>
+              <Link to ={"/ Sign in"} className="block py-2" onClick={() => setIsOpen(false)}>
+                Sign in
+              </Link>
+            </li>
+            <li>
+              <Link to = {"/Favourites"} className="block py-2" onClick={() => setIsOpen(false)}>
+                Favourites
+              </Link>
+            </li>
+            <li>
+              <Link to = {"/Cart"} className="block py-2" onClick={() => setIsOpen(false)}>
+                Shopping bag (0)
+              </Link>
+            </li>
           </ul>
         )}
       </nav>
-
     </div>
   );
 };
