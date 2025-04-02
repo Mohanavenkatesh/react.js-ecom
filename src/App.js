@@ -5,6 +5,7 @@ import { Home } from './pages/Home';
 import { Shop } from './pages/Shop';
 import { Cart } from './pages/Cart';
 import { Footer } from './components/Footer';
+// import Navbar from './components/Navbar';
 
 const App = () => {
   
@@ -14,7 +15,7 @@ const App = () => {
 
     <BrowserRouter>
 
-      <Navbar/>
+      <Navbar></Navbar>
       <Routes>
 
         <Route path="/" element={<Home array={array} setarray={setArray} />} />
