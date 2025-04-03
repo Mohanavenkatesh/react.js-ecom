@@ -18,21 +18,7 @@ export const Navbar = ({ theme, toggleTheme }) => {
         <div className="container mx-auto md:px-20 pb-10  flex justify-between items-center ">
           {/* Left Side Links */}
           <div className="hidden md:flex space-x-6 items-center">
-            <Link to={"/Sustainability"} className="text-sm font-medium hover:text-gray-500">
-              Sustainability
-            </Link>
-            <Link href="#" className="text-sm font-medium hover:text-gray-500">
-              Customer Service
-            </Link>
-            <Link to={"/Newsletter"} className="text-sm font-medium hover:text-gray-500">
-              Newsletter
-            </Link>
-            <FaEllipsisH className="text-lg text-gray-600 cursor-pointer" />
-          </div>
-
-          {/* Center Logo */}
-          <div className="flex justify-center items-center">
-            <Link to={'/'}>
+          <Link to={'/'}>
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
                 alt="React Logo"
