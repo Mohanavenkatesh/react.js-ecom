@@ -7,6 +7,8 @@ import kidBanner from "../imgs/kidsBanner.avif";
 import menBanner from "../imgs/menBanner.avif";
 import womenBanner from "../imgs/womenBanner.avif";
 import "../css/Home.css";
+import { ShoppingCart } from "lucide-react";
+
 
 export const Home = ({ array, setarray, theme, toggleTheme }) => {
   const addToCart = (item) => {
@@ -137,6 +139,38 @@ export const Home = ({ array, setarray, theme, toggleTheme }) => {
           ))}
         </div>
       </div>
+
+      <div className="bg-gray-900 text-white flex justify-between items-center p-4">
+      <p className="text-lg font-semibold">Get 10% off on bulk orders.</p>
+      <button className="flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">
+        <ShoppingCart size={16} /> SHOP NOW
+      </button>
+    </div>
+
+       {/* Collections Section - 2 */}
+       <div className="bg-gray-900 py-12 px-4 text-center">
+        <h2 className="text-white text-2xl mb-6">Our Top New Collections</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {collections.map((item, index) => (
+            <div key={index} className="bg-gray-800 p-6 rounded-lg text-center">
+              <img src={item.image} alt={item.name} className="mb-4 w-full h-60 object-cover rounded" />
+              <p className="text-gray-400">{item.category}</p>
+              <h3 className="text-white text-lg font-semibold mt-2">{item.name}</h3>
+              <p className="text-yellow-400 mt-2">★★★★★</p>
+              <p className="text-white mt-2">{item.price}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="bg-gray-100 py-10 px-6 text-center">
+      <h2 className="text-2xl font-bold text-gray-800 mb-4">What Our Customers Say</h2>
+      <div className="max-w-xl mx-auto bg-white p-6 rounded-lg shadow-md">
+        <p className="text-gray-600 italic">"This product exceeded my expectations. The quality is top-notch and the service was excellent!"</p>
+        <h3 className="mt-4 font-semibold text-gray-900">John Doe</h3>
+        <p className="text-gray-500 text-sm">Verified Customer</p>
+      </div>
+    </div>
     </div>
   );
 };
