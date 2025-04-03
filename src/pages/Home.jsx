@@ -25,14 +25,31 @@ const ImageCard = ({ image, name, category, price }) => (
 );
 
 export const Home = ({ array, setarray }) => {
+  // Image banners
+  const banners = [kidBanner, menBanner, womenBanner];
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Function to navigate to the next slide
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % banners.length);
+  };
+
+  // Function to navigate to the previous slide
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + banners.length) % banners.length);
+  };
+
+  // State for additional image carousel
   const [current, setCurrent] = useState(0);
 
+  // Images for the second image carousel
   const images = useMemo(() => [
     "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=800&h=400&fit=crop",
     "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=800&h=400&fit=crop",
     "https://images.unsplash.com/photo-1511763368359-3ad60b3eba2c?w=800&h=400&fit=crop",
   ], []);
 
+  // Features for the Features section
   const features = useMemo(() => [
     { icon: <Truck className="h-12 w-12 text-green-400" />, title: "Worldwide shipping", description: "We ship across the globe" },
     { icon: <Percent className="h-12 w-12 text-green-400" />, title: "Bulk Orders", description: "Get flat 10% discount on bulk orders" },
@@ -40,6 +57,7 @@ export const Home = ({ array, setarray }) => {
     { icon: <Scissors className="h-12 w-12 text-green-400" />, title: "Blouse, Fall & Edging Services", description: "Get your saree drape-ready" },
   ], []);
 
+  // Collections for the top new collections section
   const collections = useMemo(() => [
     { image: "../imgs/collection1.avif", category: "Sarees", name: "Linen Sequin Work Sarees", price: "₹1,500.00" },
     { image: "../imgs/collection2.avif", category: "Sarees", name: "Plaid Checkered Semi Cottons", price: "₹1,300.00" },
@@ -47,50 +65,63 @@ export const Home = ({ array, setarray }) => {
     { image: "../imgs/collection4.avif", category: "Sarees", name: "Tissue Cottons", price: "₹999.00" },
   ], []);
 
+  // Category collections for special categories
   const categoryCollections = useMemo(() => [
     { image: "../imgs/workwear.avif", title: "Work Wear", description: "Shop from our comfortable range of cottons and semi-linen workwear drapes." },
     { image: "../imgs/festive.avif", title: "Festive Collection", description: "Shop from our affordable range of festive collection sarees for any occasion." },
     { image: "../imgs/casual.avif", title: "Casual Wears & Blouse Materials", description: "Shop from our range of comfortable drapes for casual wears and blouse materials." },
   ], []);
 
-  const prevSlide = () => {
+  // Functions to control second image carousel
+  const prevImage = () => {
     setCurrent(current === 0 ? images.length - 1 : current - 1);
   };
 
-  const nextSlide = () => {
+  const nextImage = () => {
     setCurrent(current === images.length - 1 ? 0 : current + 1);
   };
 
   return (
     <div className="bg-gray-100 min-h-screen p-6">
-
       {/* Image Slider */}
-      <div className="relative w-full max-w-2xl mx-auto mt-10">
-        <img src={images[current]} alt="Slide" className="w-full rounded-lg shadow-xl" />
-        <button onClick={prevSlide} className="absolute top-1/2 left-4 bg-gray-800 text-white p-2 rounded-full shadow-md hover:bg-gray-700">
-          <ChevronLeft size={24} />
-        </button>
-        <button onClick={nextSlide} className="absolute top-1/2 right-4 bg-gray-800 text-white p-2 rounded-full shadow-md hover:bg-gray-700">
-          <ChevronRight size={24} />
-        </button>
-      </div>
+      <div className="relative w-full overflow-hidden">
+        {/* Carousel image */}
+        <img
+          src={banners[currentIndex]}
+          alt="Banner"
+          className="w-full object-cover h-96"
+        />
 
-      {/* Kids Wear Banner */}
-      <div className="md:px-20 mt-10">
-        <Link to="/Shop">
-          <img className="mb-5 w-full rounded-lg shadow-xl" src={kidBanner} alt="Kids Wear" />
-        </Link>
-        <div className="w-36 md:w-52 my-5 text-center">
-          <h1 className="md:text-4xl mb-2 font-bold text-gray-800">Kids Wear</h1>
-          <p className="mb-2 text-gray-600">Jump into spring</p>
-          <Link to="/Shop">
-            <button className="bg-green-600 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-green-700 transition ease-in-out duration-300">
-              Shop Now
-            </button>
-          </Link>
+        {/* Left arrow */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-600 p-2 rounded-full text-white"
+        >
+          &#8592;
+        </button>
+
+        {/* Right arrow */}
+        <button
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-600 p-2 rounded-full text-white"
+        >
+          &#8594;
+        </button>
+
+        {/* Optional: Dots for navigation */}
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          {banners.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-3 h-3 rounded-full ${
+                index === currentIndex ? "bg-blue-500" : "bg-gray-400"
+              }`}
+            />
+          ))}
         </div>
       </div>
-
+      
       {/* Features Section */}
       <div className="bg-gray-900 py-12 px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {features.map((feature, index) => <FeatureCard key={index} {...feature} />)}
