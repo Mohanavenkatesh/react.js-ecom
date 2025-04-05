@@ -29,17 +29,20 @@ export const Navbar = ({ theme, toggleTheme }) => {
 
           {/* Right Side Icons */}
           <div className="hidden md:flex space-x-6 items-center">
-            <Link to={"/Sign in"} className="flex items-center space-x-1 hover:text-gray-500">
+            <Link to={"/"} className="flex items-center space-x-1 ">
               {/* <FaUser /> */}
-              <span className="text-sm">Sign in</span>
+              <span className="text-sm">Home</span>
             </Link>
-            <Link to={"/Favoruites"} className="flex items-center space-x-1 hover:text-gray-500">
+            <Link to={"/Favoruites"} className="flex items-center space-x-1 ">
               {/* <FaHeart /> */}
-              <span className="text-sm">Favourites</span>
+              <span className="text-sm">Shop</span>
+            </Link>
+            <Link to={"/Favoruites"} className="flex items-center space-x-1 ">
+              {/* <FaHeart /> */}
+              <span className="text-sm">Contact</span>
             </Link>
 
-
-            <Link to={"/Cart"} className="flex items-center space-x-1 hover:text-gray-500" ><FaShoppingBag /> <span className="text-sm">Shopping bag (0)</span></Link>
+            <Link to={"/Cart"} className="flex items-center space-x-1 " > <span className="text-sm">Cart (0)</span><FaShoppingBag /></Link>
           </div>
 
           {/* Mobile Menu Button */}
