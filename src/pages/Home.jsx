@@ -96,7 +96,7 @@ export const Home = ({ array, setarray }) => {
         <img
           src={banners[currentIndex]}
           alt="Banner"
-          className="w-full object-cover h-96 transition-transform duration-700"
+          className="w-full object-cover h-100 transition-transform duration-700"
         />
 
         <button
@@ -128,20 +128,20 @@ export const Home = ({ array, setarray }) => {
       </div>
 
       {/* Features Section */}
-      <div className="bg-gray-900 py-12 px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="bg-white-900 py-12 px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {features.map((feature, index) => <FeatureCard key={index} {...feature} />)}
       </div>
 
       {/* Collections Section */}
-      <div className="bg-gray-900 py-12 px-6 text-center">
-        <h2 className="text-white text-3xl mb-6 font-semibold">Our Top New Collections</h2>
+      <div className="bg-white-900 py-12 px-6 text-center">
+        <h2 className="text-dark text-3xl mb-6 font-semibold">Our Top New Collections</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {collections.map((item, index) => <ImageCard key={index} {...item} />)}
         </div>
       </div>
 
       {/* Category Collections Section */}
-      <div className="bg-green-900 py-12 px-6 text-center">
+      <div className="bg-white-900 py-12 px-6 text-center">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {categoryCollections.map((item, index) => (
             <div key={index} className="bg-gray-800 p-6 rounded-lg text-center shadow-lg transition-transform transform hover:scale-105">
