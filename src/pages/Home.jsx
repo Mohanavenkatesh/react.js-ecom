@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { ChevronLeft, ChevronRight, ShoppingCart, Truck, Percent, HandCoins, Scissors } from "lucide-react";
-import kidBanner from "../imgs/kidsBanner.avif";
-import menBanner from "../imgs/menBanner.avif";
-import womenBanner from "../imgs/womenBanner.avif";
+import kidBanner from "../imgs/kidsBanner.webp";
+import menBanner from "../imgs/menBanner.webp";
+import womenBanner from "../imgs/womenBanner.webp";
 import "../css/Home.css";
 
 const FeatureCard = ({ icon, title, description }) => (
@@ -96,7 +96,7 @@ export const Home = ({ array, setarray }) => {
         <img
           src={banners[currentIndex]}
           alt="Banner"
-          className="w-full object-cover h-100 transition-transform duration-700"
+          className="w-full object-cover h-96 transition-transform duration-700"
         />
 
         <button
