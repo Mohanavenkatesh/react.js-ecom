@@ -148,7 +148,7 @@ export const Home = ({ array, setarray }) => {
               <img src={item.image} alt={item.title} className="mb-4 w-full h-60 object-cover rounded-lg" />
               <h3 className="text-white text-lg font-semibold mt-2">{item.title}</h3>
               <p className="text-gray-400 mt-2">{item.description}</p>
-              <button className="mt-4 bg-green-600 text-white py-2 px-6 rounded-lg hover:bg-green-700 transition ease-in-out duration-300">Shop Now →</button>
+              <button className="mt-4 bg-dark text-white py-2 px-6 rounded-lg  transition ease-in-out duration-300">Shop Now →</button>
             </div>
           ))}
         </div>
@@ -157,7 +157,7 @@ export const Home = ({ array, setarray }) => {
       {/* Bulk Order Section */}
       <div className="bg-gray-900 text-white flex justify-between items-center p-6 rounded-lg mt-10 shadow-xl">
         <p className="text-lg font-semibold">Get 10% off on bulk orders.</p>
-        <button className="flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition ease-in-out duration-300">
+        <button className="flex items-center gap-2 bg-black text-white px-6 py-3 rounded-lg  transition ease-in-out duration-300">
           <ShoppingCart size={16} /> SHOP NOW
         </button>
       </div>
