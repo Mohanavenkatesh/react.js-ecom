@@ -134,7 +134,7 @@ export const Home = ({ array, setarray }) => {
 
       {/* Collections Section */}
       <div className="bg-white-900 py-12 px-6 text-center">
-        <h2 className="text-dark text-3xl mb-6 font-semibold">Our Top New Collections</h2>
+        <h2 className="text-dark text-3xl mb-6 font-semibold"> New Collections</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {collections.map((item, index) => <ImageCard key={index} {...item} />)}
         </div>
