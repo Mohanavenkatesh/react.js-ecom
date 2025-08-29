@@ -8,6 +8,7 @@ import Products from './pages/Products'
 import Contact from './pages/Contact'
 import Faq from './pages/Faq'
 import Error from './pages/Error'
+import Cart from './pages/Cart'
 
 function App() {
 
@@ -21,7 +22,8 @@ function App() {
           <Route path='/Products' element={<Products />} ></Route>
           <Route path='/Content' element={<Contact />} ></Route>
           <Route path='/Faq' element={<Faq />} ></Route>
-          <Route path='*' element={<Error/>} ></Route>
+          <Route path='/Cart' element={<Cart />} ></Route>
+          <Route path='*' element={<Error />} ></Route>
         </Routes>
         <Footer />
       </div>
