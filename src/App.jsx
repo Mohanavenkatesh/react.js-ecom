@@ -9,6 +9,9 @@ import Contact from './pages/Contact'
 import Faq from './pages/Faq'
 import Error from './pages/Error'
 import Cart from './pages/Cart'
+import Men from './pages/Men'
+import Women from './pages/Women'
+import Kids from './pages/Kids'
 
 function App() {
 
@@ -23,6 +26,9 @@ function App() {
           <Route path='/Content' element={<Contact />} ></Route>
           <Route path='/Faq' element={<Faq />} ></Route>
           <Route path='/Cart' element={<Cart />} ></Route>
+          <Route path='/Men' element={<Men />} ></Route>
+          <Route path='/Women' element={<Women />} ></Route>
+          <Route path='/Kids' element={<Kids />} ></Route>
           <Route path='*' element={<Error />} ></Route>
         </Routes>
         <Footer />

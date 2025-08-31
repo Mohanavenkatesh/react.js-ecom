@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { ShoppingCart } from 'lucide-react';
+
 
 const Navbar = () => {
   return (
@@ -14,7 +16,7 @@ const Navbar = () => {
         <Link to='/Content'>Contact</Link>
       </div>
       <div>
-        <Link to='Cart'>Cart</Link>
+        <Link to='Cart'><ShoppingCart /></Link>
       </div>
     </div>
   )

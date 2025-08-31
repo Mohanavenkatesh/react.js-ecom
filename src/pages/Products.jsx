@@ -1,51 +1,37 @@
 import React from 'react'
-
-const localproducts = [
-
-  // men 
-  {
-    id: 1,
-    title: "H&M Men Slim Fit Shirt",
-    description: "by H&M India",
-    price: 1299,
-    image: "src/assets/men.avif"
-  },
-  {
-    id: 2,
-    title: "H&M Women Cotton Dress",
-    description: "by H&M India",
-    price: 1799,
-    image: "src/assets/women.avif"
-  },
-  {
-    id: 3,
-    title: "H&M Kids Printed T-shirt",
-    description: "by H&M India",
-    price: 599,
-    image: "src/assets/kids.avif"
-  },
-]
-
+import Men from '../assets/men.avif'
+import Kid from '../assets/kids.avif'
+import Women from '../assets/Women.avif'
+import { Link } from 'react-router-dom'
 
 const Products = () => {
-
-  const products = localproducts;
-
   return (
     <>
-      <div>
-        <div className='mx-5'>
-          <div className='p-5 my-5   max-w-[1400px] mx-auto'>
-            <div className='grid grid-cols-1 md:grid-cols-3  gap-5'>
-              {products.map((product =>
-                <div key={product.id}>
-                  <img src={product.image} alt="" />
-                  <p>{product.title}</p>
-                  <p>{product.description}</p>
-                  <p>{product.price}</p>
-                </div>
-              ))}
-            </div>
+      <div className='py-10 flex justify-center items-center'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
+          <div className="flex flex-col items-center">
+            <Link to='/Men'><img className='w-80' src={Men} alt="menimg" /></Link>
+            <Link to='/Men' className='w-full'>
+              <button className="mt-4 py-3 w-full bg-black border text-white hover:bg-white hover:text-black hover:border border-black">
+                Shop Men's
+              </button>
+            </Link>
+          </div>
+          <div className="flex flex-col items-center">
+            <Link to='/Kids'><img className='w-80' src={Kid} alt="kidimg" /></Link>
+            <Link to='/Kids' className='w-full'>
+              <button className="mt-4 py-3 w-full bg-black border text-white hover:bg-white hover:text-black hover:border border-black">
+                Shop Kid's
+              </button>
+            </Link>
+          </div>
+          <div className="flex flex-col items-center">
+            <Link to='/Women'><img className='w-80' src={Women} alt="womenimg" /></Link>
+            <Link to='/Women' className='w-full'>
+              <button className="mt-4 py-3 w-full bg-black border text-white hover:bg-white hover:text-black hover:border border-black">
+                Shop Women's
+              </button>
+            </Link>
           </div>
         </div>
       </div>

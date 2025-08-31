@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <footer className="w-full">
-      <div className="p-5 mb-10 border mx-auto border-b-stone-700 rounded-xl max-w-[1400px] bg-white">
+      <div className="p-5 mb-10 border mx-auto border-b-stone-700 rounded-xl max-w-[1400px] ">
         <div className="flex flex-col gap-8 md:flex-row md:justify-between md:items-start flex-wrap">
           <div className="flex-1 min-w-[200px] mb-4 md:mb-0">
             <h1 className="font-bold text-lg mb-2">ShopEase</h1>
