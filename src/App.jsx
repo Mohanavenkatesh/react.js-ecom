@@ -6,13 +6,13 @@ import Navbar from './components/Navbar'
 import Shop from './pages/Shop'
 import Footer from './components/Footer'
 import NewArrivals from './pages/NewArrivals'
-import BestSellers from './components/home/best-sellers/BestSellers'
 import Necklaces from './pages/Necklaces'
 import Rings from './pages/Rings'
 import Search from './pages/Search'
 import Account from './pages/Account'
 import Wishlist from './pages/Wishlist'
 import Bag from './pages/Bag'
+import BestSellers from './pages/BestSellers'
 
 function App() {
 

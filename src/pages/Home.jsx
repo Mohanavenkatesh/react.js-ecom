@@ -25,18 +25,22 @@ const Home = () => {
             <div className="container mx-auto px-5">
 
                 {/* categories */}
-                <div>
+                <div className='mb-15'>
                     <h1 className='mt-16 mb-1 text-3xl'> Curated by Category </h1>
                     <p className='mt-0 mb-7 underline hover:underline'>Shop All Jewelry</p>
                     <Category />
                 </div>
 
-
-
                 <div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 my-4">
-                        <img src={categoryimg5} alt="categoryimg5" />
-                        <img src={categoryimg6} alt="categoryimg6" />
+                        <div>
+                            <img src={categoryimg5} alt="categoryimg5" />
+                            <h1>Your Daily Sparkle - Shop Earrings</h1>
+                        </div>
+                        <div>
+                            <img src={categoryimg6} alt="categoryimg6" />
+                            <h1>You & Me - Toi et Moi</h1>
+                        </div>
                     </div>
                 </div>
                 {/* Best Sellers  */}

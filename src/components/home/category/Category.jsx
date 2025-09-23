@@ -104,13 +104,18 @@ const Category = (props) => {
                                     alt={slide.title}
                                     className="w-full object-cover mb-4 "
                                 />
-                                <h1>{slide.name}</h1>
+                                <h3>{slide.name}</h3>
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
-
+            <div className="embla__controls ">
+                <div className="embla__buttons md:hidden">
+                    <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+                    <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+                </div>
+            </div>
         </section>
     )
 }
