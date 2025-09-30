@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { RiMenu3Fill } from "react-icons/ri";
 import { IoCloseSharp } from "react-icons/io5";
-
-
+import logoImg from '../assets/logo/logo.svg'
 
 const Navbar = () => {
 
@@ -30,6 +29,8 @@ const Navbar = () => {
         <div>
             <div className='flex justify-between md:px-5 md:py-2'>
 
+            <img src={logoImg} alt="logo" className='w-40' />
+
                 <div className='hidden md:flex gap-5'>
 
                     {navLinks.slice(0, 6).map((desktopLinks) => (
@@ -47,22 +48,26 @@ const Navbar = () => {
 
             </div>
 
-            <div className='flex justify-between items-center p-4'>
-                <h1 >Logo</h1>
-                <button onClick={togglemenu}> {menuopen ? <IoCloseSharp /> : <RiMenu3Fill />}</button>
+            <div className=' md:hidden'>
+                <div className='flex justify-between items-center p-3'>
+                    <img src={logoImg} alt="logo" className='w-40' />
+                    <button onClick={togglemenu}> {menuopen ? <IoCloseSharp /> : <RiMenu3Fill />}</button>
+                </div>
+
+                <div>
+                    {menuopen && (
+
+                        <div className='flex flex-col justify-center items-center gap-5 p-5'>
+                            {navLinks.map((mobilemenu) => (
+                                <Link key={mobilemenu.to} to={mobilemenu.to}>{mobilemenu.lable}</Link>
+                            ))}
+                        </div>
+
+                    )}
+                </div>
             </div>
 
-            <div>
-                {menuopen && (
 
-                    <div className='flex flex-col justify-center items-center gap-5 p-5'>
-                        {navLinks.map((mobilemenu) => (
-                            <Link key={mobilemenu.to} to={mobilemenu.to}>{mobilemenu.lable}</Link>
-                        ))}
-                    </div>
-
-                )}
-            </div>
         </div>
 
     )

@@ -7,7 +7,7 @@ import {
 import useEmblaCarousel from 'embla-carousel-react'
 import categoryimg1 from '../../../assets/home/category/bracelets.avif'
 import categoryimg2 from '../../../assets/home/category/earrings.avif'
-import categoryimg3 from '../../../assets/home/category/necklaces.avif'
+import categoryimg3 from '../../../assets/home/category/necklaces-2.avif'
 import categoryimg4 from '../../../assets/home/category/rings.avif'
 
 // Example card content data
@@ -110,12 +110,16 @@ const Category = (props) => {
                     ))}
                 </div>
             </div>
-            <div className="embla__controls ">
-                <div className="embla__buttons md:hidden">
-                    <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-                    <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+            <div className='flex justify-center md:hidden'>
+                <div className="embla__controls">
+                    <div className="embla__buttons">
+
+                        <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+                        <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+                    </div>
                 </div>
             </div>
+
         </section>
     )
 }
