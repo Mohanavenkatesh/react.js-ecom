@@ -1,7 +1,7 @@
 import React from 'react'
 // banner
-import bannerimgdesktop from '../assets/home/banner/desktop-banner-by-mohan.avif'
-import bannerimgmobile from '../assets/home/banner/mobile-banner-by-mohan.avif'
+import bannerimgdesktop from '../assets/home/banner/desktop-banner-by-mohan-2.webp'
+import bannerimgmobile from '../assets/home/banner/mobile-banner-by-mohan-2.webp'
 // categories
 import categoryimg5 from '../assets/home/category/earrings-2.avif'
 import categoryimg6 from '../assets/home/category/rings-2.avif'
