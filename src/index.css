@@ -4,24 +4,18 @@
 
 
 /* @font-face {
-  font-family: 'SchnyderS';
-  src:
-    local('SchnyderS'),
-    url('./assets/font/SchnyderXLLight.ttf') format('truetype');
-  font-weight: 300 !important;
-  font-style: normal;
-  font-display: swap;
-} */
-
-
-/* body {
-  font-family: 'SchnyderS', serif;
-} */
+    font-family: 'SchnyderS';
+    src:
+      local('SchnyderS'),
+      url('./assets/font/SchnyderXLLight.ttf') format('truetype');
+    font-weight: 300 !important;
+    font-style: normal;
+    font-display: swap;
+  } */
 
 
 body {
-  font-family: 'Roboto', serif;
-  font-weight: 380;
+  font-family: 'Playfair Display', serif;
 }
 
 

@@ -1,7 +1,6 @@
 import React from 'react'
 // banner
-import bannerimgdesktop from '../assets/home/banner/desktop-banner-by-mohan-2.webp'
-import bannerimgmobile from '../assets/home/banner/mobile-banner-by-mohan-2.webp'
+import Hero from '../components/home/Hero'
 // categories
 import categoryimg5 from '../assets/home/category/earrings-2.avif'
 import categoryimg6 from '../assets/home/category/rings-2.avif'
@@ -10,17 +9,11 @@ import BestSellers from '../components/home/best-sellers/BestSellers'
 import AsSeenIn from '../components/home/as-seen-in/AsSeenIn'
 import Category from '../components/home/category/Category'
 
-
-
-
 const Home = () => {
     return (
         <div>
             {/* banner image */}
-            <div className='flex justify-center xl:w-full'>
-                <img className='hidden md:block' src={bannerimgdesktop} alt="bannerimg" />
-                <img className='block md:hidden' src={bannerimgmobile} alt="bannerimg" />
-            </div>
+            <Hero />
 
             <div className="container mx-auto px-5">
 
